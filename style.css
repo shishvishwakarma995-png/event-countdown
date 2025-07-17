@@ -1,0 +1,154 @@
+/* Reset & Base */
+
+:root {
+    --bg: hwb(189 53% 19%);
+    --text: #000000;
+    --card-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.3);
+}
+
+body.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: 0.5s;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Glass Effect */
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.input-group {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+input,
+button {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+}
+
+button {
+    background: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+/* Event Card */
+.event {
+    margin-top: 1.2rem;
+    background: rgba(29, 17, 17, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+    animation: fadeIn 0.4s ease;
+}
+
+.event-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.countdown {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: #1e1e1e;
+    color: #f9f9f9;
+}
+
+.dark-mode .glass {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.9);
+}
+
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    background: #111;
+    color: white;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+
+    input,
+    button {
+        width: 100%;
+    }
+}
+
+.delete-btn {
+    margin-top: 0.5rem;
+    background-color: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #dc2626;
+}
