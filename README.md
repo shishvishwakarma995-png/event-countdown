@@ -23,4 +23,4 @@ A clean and interactive event countdown timer made using *HTML, **CSS, and **Jav
 
 *Shishanki Vishwakarma*  
 B.Sc. Biotechnology | Web Developer  
-[GitHub Profile](https://github.com/shishankivishwakarma995-png)
+https://github.com/shishankivishwakarma995-png
